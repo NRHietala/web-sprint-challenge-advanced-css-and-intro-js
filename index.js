@@ -259,12 +259,8 @@ Create a function called `removeArtist` that takes two arguments:
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 function removeArtist(arr, index) {
-  for (let i=0; i < arr.length; i++) {
-    if(arr[i] === index) {
-      arr.splice( i , 1 );
-    }
-    return arr.length;
-  }   
+  arr.splice(index,1);
+  return arr.length;
 }
    
 
@@ -283,14 +279,16 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 At the end, this function should return the new array with information added"*/
 
 function addArtist (arr,id,name,years,genre,nationality,bio){
-  // return arr.push({
-  //   id: 20,
-  //   name: "Nathan Hietala",
-  //   years: "1990-current",
-  //   genre: "Web Design",
-  //   nationality: "all kinds",
-  //   bio: "This is one sentence."
-  // });
+  const newObj = {
+    id: 20,
+    name: "Nathan Hietala",
+    years: "1990-current",
+    genre: "Web Design",
+    nationality: "all kinds",
+    bio: "This is one sentence."
+  };
+  arr.push(newObj)
+  return arr;
   }
 
   
