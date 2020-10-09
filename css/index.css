@@ -128,7 +128,7 @@ button:hover{
 }
 
 .artist{
-    width:40%;
+    width:100%;
     text-align:center;
 }
 .artist img{
@@ -139,10 +139,24 @@ button:hover{
     .container {
         display:flex;
         flex-direction:column;
+    
     }
 
     .artists-container {
         flex-direction:column;
         align-items:center;
+        justify-content:stretch;
+        width: 80%;
+        
     }
+
+    nav {
+        width:70%;
+    }
+
+    .title-container div{
+        width:100%;
+    }
+
+
 }
