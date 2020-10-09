@@ -238,7 +238,7 @@ Create a function called get20s() that takes data as an argument and returns an 
 function get20s(arr){
   let newArr =[];
   for (let i =0; i<arr.length;i++) {
-    if (arr[i]['years'] > 1900) {
+    if (arr[i]['years'] > "1900") {
       newArr.push(arr[i]['name'])
     }
   }
