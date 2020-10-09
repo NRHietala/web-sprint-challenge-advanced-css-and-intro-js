@@ -237,13 +237,13 @@ Create a function called get20s() that takes data as an argument and returns an 
 
 function get20s(arr){
   let newArr =[];
-  for (let i =0; i < arr.length;i++) {
-    if(arr[i]["years"].includes("1900")) {
-      newArr.push(arr[i]["name"])
+  for (let i =0; i<arr.length;i++) {
+    if (arr[i]['years'] > 1900) {
+      newArr.push(arr[i]['name'])
     }
-    return newArr;
   }
- }
+  return newArr;
+}
 
 
 
@@ -303,7 +303,13 @@ and returns an array with names of artists who painted more than 100 paintings.
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
 function lotsOfArt(arr){
-  
+  let newArr = [];
+  for (let i =0; i<arr.length;i++) {
+    if(arr[i]['paintings'] > 100) {
+      newArr.push(arr[i]['name'])
+    }
+  }
+  return newArr;
 }
 
 
