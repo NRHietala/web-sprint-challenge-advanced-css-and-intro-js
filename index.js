@@ -235,9 +235,15 @@ function getArtistByIndex(arr, index) {
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(data){
-  /*Your Code Here*/
-}
+function get20s(arr){
+  let newArr =[];
+  for (let i =0; i < arr.length;i++) {
+    if(arr[i]["years"].includes("1900")) {
+      newArr.push(arr[i]["name"])
+    }
+    return newArr;
+  }
+ }
 
 
 
@@ -252,8 +258,13 @@ Create a function called `removeArtist` that takes two arguments:
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function removeArtist(arr, index) {
+  for (let i=0; i < arr.length; i++) {
+    if(arr[i] === index) {
+      arr.splice( i , 1 );
+    }
+    return arr.length;
+  }   
 }
    
 
@@ -271,8 +282,15 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/*Your Code Here*/){
-  /*Your Code Here*/
+function addArtist (arr,id,name,years,genre,nationality,bio){
+  // return arr.push({
+  //   id: 20,
+  //   name: "Nathan Hietala",
+  //   years: "1990-current",
+  //   genre: "Web Design",
+  //   nationality: "all kinds",
+  //   bio: "This is one sentence."
+  // });
   }
 
   
@@ -286,8 +304,8 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(arr){
+  
 }
 
 
